@@ -42,7 +42,7 @@ def download_file(url, local_path):
                 with open(local_path, 'wb') as f:
                     for chunk in r.iter_content(chunk_size=8192): 
                         f.write(chunk)
-            st.info(f"Download complete: {os.path.basename(local_path)}")
+           # st.info(f"Download complete: {os.path.basename(local_path)}")
         except Exception as e:
             st.error(f"Failed to download {local_path}: {e}")
             return False
@@ -422,3 +422,4 @@ try:
 except Exception:
 
     st.info("No analysis history found yet.")
+
