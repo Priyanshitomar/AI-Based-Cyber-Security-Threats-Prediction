@@ -15,7 +15,7 @@ except Exception:
 
 # --- Page Config ---
 st.set_page_config(
-    page_title="Unified SIEM Dashboard",
+    page_title="AI based Cybersecurity Threat Prediction",
     page_icon="🛡️",
     layout="wide"
 )
@@ -132,7 +132,7 @@ def fetch_dashboard_data():
     }
 
 # --- Main Dashboard UI ---
-st.title("🛡️ Unified Cyber Threat Dashboard")
+st.title("🛡️ AI based Cybersecurity Threat Prediction")
 st.markdown("Real-time monitoring and AI-powered threat intelligence.")
 
 # Auto-refreshing data
@@ -266,4 +266,5 @@ else:
 st.write("This dashboard auto-refreshes every 5 seconds.")
 import time
 time.sleep(5)
+
 st.rerun()
