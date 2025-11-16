@@ -35,7 +35,7 @@ def download_file(url, local_path):
     """Downloads a file from a URL to a local path."""
     os.makedirs(os.path.dirname(local_path), exist_ok=True)
     if not os.path.exists(local_path):
-        st.info(f"Downloading file: {os.path.basename(local_path)}...")
+        #st.info(f"Downloading file: {os.path.basename(local_path)}...")
         try:
             with requests.get(url, stream=True) as r:
                 r.raise_for_status()
@@ -260,7 +260,7 @@ if geo_reader is None:
 
 # --- Sidebar Controls ---
 with st.sidebar:
-    st.title("Ingest Controls")
+    st.title("Upload files")
     uploaded_files = st.file_uploader(
         "Upload dataset(s)", 
         accept_multiple_files=True, 
@@ -420,4 +420,5 @@ try:
     else:
         st.warning("Database connection for history not available.")
 except Exception:
+
     st.info("No analysis history found yet.")
